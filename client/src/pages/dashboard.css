@@ -1,0 +1,52 @@
+/* app.css */
+
+/* Basic styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .logout-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .logout-button:focus {
+    outline: none;
+  }
+  
