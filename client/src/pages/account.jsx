@@ -29,17 +29,7 @@ const Account = () => {
 
   return (
     <div>
-      <nav>
-       
-        <div className="nav-left">
-          <a href="/dashboard" className="nav-item">Dashboard</a>
-        </div>
-        <div className="nav-right">
-          <button>Logout</button>
-        </div>
-      </nav>
-
-      <form onSubmit={handleSubmit} className='box'>
+      <form onSubmit={handleSubmit} className="box">
         <h3>Set Up Your Account</h3>
         <label>
           Name:
@@ -60,7 +50,6 @@ const Account = () => {
             value={formData.mobileNo}
             onChange={handleChange}
             required
-            
           />
         </label>
         <br />
@@ -131,3 +120,10 @@ const Account = () => {
 };
 
 export default Account;
+
+
+
+
+
+
+

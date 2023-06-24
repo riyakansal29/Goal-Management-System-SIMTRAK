@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LoginPage.css'; // Import the CSS file for styling
 
-const LoginPage = ({handleLogin}) => {
+const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,7 +19,6 @@ const LoginPage = ({handleLogin}) => {
       .then((response) => {
         if (response.ok) {
           console.log('User login successful');
-          handleLogin();
           // Handle successful login (e.g., redirect to a dashboard page)
         } else {
           console.error('Error logging in:', response.statusText);

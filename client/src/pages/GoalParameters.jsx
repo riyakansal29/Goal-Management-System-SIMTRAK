@@ -18,14 +18,7 @@ const GoalParameters = () => {
 
   return (
     <div>
-      <nav>
-        <div className="nav-left">
-          <button>Dashboard</button>
-        </div>
-        <div className="nav-right">
-          <button>Logout</button>
-        </div>
-      </nav>
+
       <div className="goal-parameters-container">
         <h1>Goal Parameters</h1>
         <form>

@@ -1,35 +1,37 @@
 
 import React, {useState} from 'react';
 import './dashboard.css';
-
-
-const Dashboard = () => {
-    const [loggedIn, setLoggedIn] = useState(true);
-  
-    const handleLogout = () => {
-      // Perform logout logic here
-      setLoggedIn(false);
-    };
-  
-    if (!loggedIn) {
-      // Redirect to login page or show a login form
-      return <h1>Please log in</h1>;
-    }
+import { Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Goals from './GoalParameters'
+import Account from './account.jsx'
+const Dashboard = ({handleLogout}) => {
+  const handleLogoutClick = () => {
+    handleLogout();
+  };
 
   return (
     <div>
       <nav className="navbar">
         <div className="navbar-left">
-        <a href="/account " className="navbar-item">Account</a>
-          <a href="/goals" className="navbar-item">Goals</a>
+
+        <Link to="/" className="navbar-item">Account</Link>
+          <Link to="/goals" className="navbar-item">Goals</Link>
         </div>
+        
         <div className="navbar-right">
           
-          <button className="logout-button" onClick={handleLogout}>Logout</button>
+          <button className="logout-button" onClick={handleLogoutClick} >Logout</button>
         </div>
       </nav>
-      <h1>Welocome to Dashboard</h1>
-      {/* Rest of the dashboard content */}
+<BrowserRouter>
+      <Routes>
+                     <Route path="/" element={<Account/>}/>
+                    
+                    <Route path="/goals" element={<Goals/>}/>
+                    </Routes>
+                    </BrowserRouter>
+                
     </div>
   );
 };
